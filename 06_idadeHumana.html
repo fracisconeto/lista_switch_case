@@ -8,10 +8,34 @@
     // - cães grandes: fator 7.
 
     // ENTRADA
-
+const idade = parseInt(prompt("ensira quantos anos seu cachorro tem ?").trim());
+const porte = parseInt(prompt("qual é o porte do seu cachorro(se for de porte pequeno 5 se for medio 6 se for grande 7) ") .trim());
     
     // PROCESSAMENTO
+switch (porte) {
+    case 5 :
+        alert(`a idade do seu cachorro é ${idade * 5} anos `);
+        
+        break;
 
+    case 6 :
+
+        alert(`a aidade do seu cachorro é ${idade * 6}anos`);
+
+        break;
+
+    case 7 :
+        
+        alert (`a idade do seu cachoro é de ${idade * 7}anos`);
+
+        break
+
+    default:
+
+    alert("resposta invalidade");
+    
+        break;
+}
     
     // SAÍDA
 

@@ -7,15 +7,56 @@
     - "Mora perto da vítima?"
     - "Devia para a vítima?"
     - "Já trabalhou com a vítima?"
-    O script deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
+    O script deve no final emitir uma classificação sobre a participação da pessoa no crime.
+    Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita",
+     entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
     */
 
     //ENTRADA
-
+const Telefonou = prompt("você telefonou para a vitima(s para sim e n para não)").trim()
+const esteve = prompt ("você esteve no local do crime (se esteve digite s se não esteve digite n)").trim();
+const mora = prompt ("você mora perto da vitima(se sim digite s se não digite n)").trim();
+const devia = prompt ("você deiva para a vitima (se sim digite s se não digite n )").trim();
+const trabalhou = prompt("voce ja trabalho para a vitima(se sim digite s se não digite n ) ").trim();
     
-    //PROCESSAMENTO
+    //PROCESSAMENTO 
+Telefonou =="s"  ? valor1 =  1 : valor1 = 0;
+esteve == "s" ? valor2 = 1 : valor2 =  0;
+mora == "s" ? valor3 = 1 : valor3  = 0 ;
+devia == "s" ? valor4 = 1 :  valor4 = 0;
+trabalhou == "s" ? valor5 = 1 : valor5 = 0;
 
+const final  = valor1 + valor2 + valor3 + valor4 + valor5 ; 
 
-    //SAÍDA
+   //SAÍDA
+switch (final) {
+    case 2:
+        alert("supeito");
+        
+        break;
 
+    case 3:
+    case 4:
+
+        alert("cumplise");
+
+    break ; 
+
+    case 5:
+
+    alert("assasino") ;
+    
+    break;
+     
+    case 0:
+    case 1:
+        
+        alert("inocente");
+
+        break;
+
+    default: 
+    
+    alert("valor invalido")
+}
 </script>
